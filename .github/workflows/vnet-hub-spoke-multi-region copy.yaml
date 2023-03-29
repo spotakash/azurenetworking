@@ -67,9 +67,9 @@ jobs:
       id: show
       run: terraform show main.tfplan
 
-    # - name: 'Terraform Apply'
-    #   id: apply
-    #   run: terraform apply -parallelism=30 main.tfplan
+    - name: 'Terraform Apply'
+      id: apply
+      run: terraform apply -parallelism=30 main.tfplan
 
     # - name: 'Terraform Destroy'
     #   id: destroy
