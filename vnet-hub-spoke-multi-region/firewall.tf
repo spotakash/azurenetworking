@@ -11,7 +11,7 @@ resource "azurerm_firewall" "sg_firewall" {
   sku_name           = "AZFW_VNet"
   sku_tier           = "Premium"
   firewall_policy_id = azurerm_firewall_policy.common_azfw_premium_policy.id # <---This can be variable of existing policy
-  # zones = [ "1", "2" ]
+  # zones = [ "1", "2" ] 
 
   tags = {
     location = "sg"
