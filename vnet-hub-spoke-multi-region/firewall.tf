@@ -54,7 +54,7 @@ resource "azurerm_firewall" "we_firewall" {
   # zones = [ "1", "2" ]
 
   tags = {
-    location = "sg"
+    location = "we"
     dept     = "networking"
   }
 
@@ -73,7 +73,7 @@ resource "azurerm_public_ip" "we_firewall_public_ip" {
   allocation_method   = "Static"
   sku                 = "Standard"
   tags = {
-    location = "sg"
+    location = "we"
     dept     = "networking"
   }
 }
