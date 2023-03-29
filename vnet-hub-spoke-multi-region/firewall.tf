@@ -2,7 +2,7 @@
 resource "azurerm_firewall" "sg_firewall" {
   name                = "sg_firewall"
   location            = var.sg_networking_core_location
-  resource_group_name = azurerm_resource_group.sg_networking_resource_group.name
+  resource_group_name = azurerm_resource_group.sg_hub_resource_group.name
   ip_configuration {
     name                 = "configuration"
     subnet_id            = azurerm_subnet.sg_AzureFirewallSubnet.id
@@ -29,7 +29,7 @@ resource "azurerm_firewall" "sg_firewall" {
 resource "azurerm_public_ip" "sg_firewall_public_ip" {
   name                = "sg_firewall_public_ip"
   location            = var.sg_networking_core_location
-  resource_group_name = azurerm_resource_group.sg_networking_resource_group.name
+  resource_group_name = azurerm_resource_group.sg_hub_resource_group.name
   allocation_method   = "Static"
   sku                 = "Standard"
   tags = {
