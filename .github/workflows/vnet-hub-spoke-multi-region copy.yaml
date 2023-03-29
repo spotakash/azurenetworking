@@ -46,7 +46,7 @@ jobs:
         subscription-id: ${{ secrets.ARM_SUBSCRIPTION_ID }}
     
     - name: 'Setup Terraform'
-      uses: hashicorp/setup-terraform@vw
+      uses: hashicorp/setup-terraform@v2
     
     - name: 'Terraform Init'
       id: init
