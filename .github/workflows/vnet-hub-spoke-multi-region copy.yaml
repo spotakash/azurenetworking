@@ -71,7 +71,7 @@ jobs:
     #   id: apply
     #   run: terraform apply -parallelism=30 main.tfplan
 
-    - name: 'Terraform Destroy'
-      id: destroy
-      run: terraform destroy -auto-approve -parallelism=30
+    # - name: 'Terraform Destroy'
+    #   id: destroy
+    #   run: terraform destroy -auto-approve -parallelism=30
 
