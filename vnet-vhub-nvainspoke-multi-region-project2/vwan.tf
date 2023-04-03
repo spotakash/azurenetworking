@@ -20,7 +20,7 @@ resource "azurerm_virtual_hub" "vhub-asia" {
   location            = var.asia_networking_core_location
   resource_group_name = azurerm_resource_group.vwan.name
   address_prefix      = "${var.address_space}.0.0/23"
-  virtual_wan_id      = azurerm_resource_group.wan.id
+  virtual_wan_id      = azurerm_virtual_wan.wan.id
   sku                 = "Standard"
 }
 
@@ -37,7 +37,7 @@ resource "azurerm_virtual_hub" "vhub-eu" {
   location            = var.eu_networking_core_location
   resource_group_name = azurerm_resource_group.vwan.name
   address_prefix      = "${var.address_space}.2.0/23"
-  virtual_wan_id      = azurerm_resource_group.wan.id
+  virtual_wan_id      = azurerm_virtual_wan.wan.id
   sku                 = "Standard"
 }
 
