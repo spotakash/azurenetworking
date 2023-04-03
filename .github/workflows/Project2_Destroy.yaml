@@ -1,15 +1,15 @@
-name: APPLY-vnet-hub-spoke-multi-region
+name: Destroy-Project1
 
 on:
   pull_request:
     branches:
       - main
     paths:
-      - 'vnet-hub-spoke-multi-region/**'
+      - 'vnet-hub-spoke-multi-region-project1/**'
   workflow_dispatch:
 
 env:
-  WORKDIR: "vnet-hub-spoke-multi-region"
+  WORKDIR: "vnet-hub-spoke-multi-region-project1"
   ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
   ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
   ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
@@ -26,8 +26,8 @@ permissions:
   id-token: write
 
 jobs:
-  Apply:
-    name: Apply
+  Destroy:
+    name: Destroy
     runs-on: self-hosted
     environment: 'production'
     defaults:
@@ -59,14 +59,9 @@ jobs:
         -backend-config="resource_group_name=${{ env.TFSTATE_RESOURCE_GROUP_NAME }}" \
         -backend-config="access_key=${{ env.TFSTATE_STORAGE_ACCOUNT_KEY }}"
 
-    - name: 'Terraform Plan'
-      id: plan
-      run: terraform plan -out=main.tfplan
+    - name: 'Terraform Destroy'
+      id: destroy
+      run: terraform destroy -auto-approve -parallelism=30
     
-    - name: 'Terraform Show'
-      id: show
-      run: terraform show main.tfplan
+    
 
-    - name: 'Terraform Apply'
-      id: apply
-      run: terraform apply -parallelism=30 main.tfplan
