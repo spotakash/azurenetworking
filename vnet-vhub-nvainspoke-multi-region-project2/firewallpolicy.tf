@@ -1,14 +1,14 @@
 # Resource Group for Firewall Policy
 resource "azurerm_resource_group" "common_azfw_premium_policy" {
   name     = "common_azfw_premium_policy-rg"
-  location = var.sg_networking_core_location
+  location = var.asia_networking_core_location
 }
 
 # Common Premium Firewall Policy
 resource "azurerm_firewall_policy" "common_azfw_premium_policy" {
   name                = "common_azfw_premium_policy"
   resource_group_name = azurerm_resource_group.common_azfw_premium_policy.name
-  location            = var.sg_networking_core_location
+  location            = var.asia_networking_core_location
 }
 
 # Common Premium Firewall Policy Rule Collection Group
