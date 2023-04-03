@@ -1,10 +1,10 @@
 # Multi Region Virtual Networking (Traditional) HUB-SPOKE with VNET Peering  
 
-## Very Important: It is just an asset with no liability or accountability. Use it at your own risk. 
-## It was tested working in lab environment, please validate code and test it in your environment before using it in production. 
+### Very Important: It is just an asset with no liability or accountability. Use it at your own risk. 
+### It was tested working in lab environment, please validate code and test it in your environment before using it in production. 
 
 This code base helps you to quickly build Traditional Virtual Network HUB SPOKE Topology with VNET Peering. 
-If you have SPOKE VNET, this Code base will help you to build HUB VNET and VNET Peering between HUB and SPOKE VNET, by simply providing the SPOKE VNET details in TFVAR.
+If you have existing **SPOKE VNET**, this Code base will help you to build HUB VNET and VNET Peering between HUB and SPOKE VNET, by simply providing the SPOKE VNET details in TFVAR.
 
 Key Componet, it will help build and achieve;
 - HUB VNET across two Azure Region
