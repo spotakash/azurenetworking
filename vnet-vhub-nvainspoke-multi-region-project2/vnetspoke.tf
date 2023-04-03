@@ -38,7 +38,7 @@ resource "azurerm_virtual_network" "spoke4-vnet" {
 #  Europe HUB Virtual Network and Subnets
 
 resource "azurerm_resource_group" "eunetwork" {
-  name     = var.eu_networking_core_location
+  name     = var.eu_networking_resource_group
   location = var.eu_networking_core_location
 }
 
