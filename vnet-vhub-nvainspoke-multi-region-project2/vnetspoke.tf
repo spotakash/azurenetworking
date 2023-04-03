@@ -34,6 +34,48 @@ resource "azurerm_virtual_network" "spoke4-vnet" {
   resource_group_name = azurerm_resource_group.asianetwork.name
 }
 
+# VNET Peering Spoke 3 to Secured Vnet
+resource "azurerm_virtual_network_peering" "spoke3-to-asiasecvnet" {
+  name                         = "spoke3-to-asiasecvnet"
+  resource_group_name          = azurerm_resource_group.asianetwork.name
+  virtual_network_name         = azurerm_virtual_network.spoke3-vnet.name
+  remote_virtual_network_id    = azurerm_virtual_network.asiasec-nvavnet.id
+  allow_virtual_network_access = true
+  allow_forwarded_traffic      = true
+}
+
+# VNET Peering Spoke 4 to Secured Vnet
+
+resource "azurerm_virtual_network_peering" "spoke4-to-asiasecvnet" {
+  name                         = "spoke4-to-easiasecvnetusecvnet"
+  resource_group_name          = azurerm_resource_group.asianetwork.name
+  virtual_network_name         = azurerm_virtual_network.spoke4-vnet.name
+  remote_virtual_network_id    = azurerm_virtual_network.asiasec-nvavnet.id
+  allow_virtual_network_access = true
+  allow_forwarded_traffic      = true
+}
+
+# VNET Peering Secured Vnet to Spoke 3
+resource "azurerm_virtual_network_peering" "asiasecvnet-to-spoke3" {
+  name                         = "asiasecvnet-to-spoke3"
+  resource_group_name          = azurerm_resource_group.asianetwork.name
+  virtual_network_name         = azurerm_virtual_network.asiasec-nvavnet.name
+  remote_virtual_network_id    = azurerm_virtual_network.spoke3-vnet.id
+  allow_virtual_network_access = true
+  allow_forwarded_traffic      = true
+}
+
+# VNET Peering Secured Vnet to Spoke 4
+resource "azurerm_virtual_network_peering" "asiasecvnet-to-spoke4" {
+  name                         = "asiasecvnet-to-spoke4"
+  resource_group_name          = azurerm_resource_group.asianetwork.name
+  virtual_network_name         = azurerm_virtual_network.asiasec-nvavnet.name
+  remote_virtual_network_id    = azurerm_virtual_network.spoke4-vnet.id
+  allow_virtual_network_access = true
+  allow_forwarded_traffic      = true
+}
+
+
 
 #  Europe HUB Virtual Network and Subnets
 
