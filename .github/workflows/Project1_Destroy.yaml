@@ -1,22 +1,22 @@
-name: Destroy-Project2
+name: Destroy-Project1
 
 on:
   pull_request:
     branches:
       - main
     paths:
-      - 'vnet-vhub-nvainspoke-multi-region-project2/**'
+      - 'vnet-hub-spoke-multi-region-project1/**'
   workflow_dispatch:
 
 env:
-  WORKDIR: "vnet-vhub-nvainspoke-multi-region-project2"
+  WORKDIR: "vnet-hub-spoke-multi-region-project1"
   ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
   ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
   ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
   ARM_USE_OIDC: true
   TFSTATE_STORAGE_ACCOUNT_NAME: ${{ secrets.TFSTATE_STORAGE_ACCOUNT_NAME }}
   TFSTATE_CONTAINER_NAME: ${{ secrets.TFSTATE_CONTAINER_NAME }}
-  TFSTATE_KEY: "vhubwithnvainspoke.tfstate"
+  TFSTATE_KEY: "vnethubspokemultiregion.tfstate"
   TFSTATE_RESOURCE_GROUP_NAME: ${{ secrets.TFSTATE_RESOURCES_GROUP_NAME }}
   TFSTATE_STORAGE_ACCOUNT_KEY: ${{ secrets.TFSTATE_STORAGE_ACCOUNT_KEY }}
 

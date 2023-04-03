@@ -1,4 +1,4 @@
-name: Destroy-Project2
+name: APPLY-Project2
 
 on:
   pull_request:
@@ -26,8 +26,8 @@ permissions:
   id-token: write
 
 jobs:
-  Destroy:
-    name: Destroy
+  Apply:
+    name: Apply
     runs-on: self-hosted
     environment: 'production'
     defaults:
@@ -59,9 +59,14 @@ jobs:
         -backend-config="resource_group_name=${{ env.TFSTATE_RESOURCE_GROUP_NAME }}" \
         -backend-config="access_key=${{ env.TFSTATE_STORAGE_ACCOUNT_KEY }}"
 
-    - name: 'Terraform Destroy'
-      id: destroy
-      run: terraform destroy -auto-approve -parallelism=30
+    - name: 'Terraform Plan'
+      id: plan
+      run: terraform plan -out=main.tfplan
     
-    
+    - name: 'Terraform Show'
+      id: show
+      run: terraform show main.tfplan
 
+    - name: 'Terraform Apply'
+      id: apply
+      run: terraform apply -parallelism=30 main.tfplan
