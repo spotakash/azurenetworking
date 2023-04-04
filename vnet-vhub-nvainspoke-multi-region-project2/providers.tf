@@ -9,8 +9,8 @@ terraform {
       version = ">=3.1.0"
     }
   }
-  backend "azurerm" {
-  }
+  # backend "azurerm" {
+  # }
 }
 
 
@@ -30,6 +30,3 @@ locals {
   }
 }
 
-# locals {
-#   prefix_cidr = var.vnet_address_space
-# }

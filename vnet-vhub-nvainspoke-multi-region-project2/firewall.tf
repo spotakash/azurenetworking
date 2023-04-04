@@ -25,7 +25,7 @@ resource "azurerm_firewall" "asia_firewall" {
   ]
 }
 
-# SG Firewall Public IP resource
+# ASIA Firewall Public IP resource
 resource "azurerm_public_ip" "asia_firewall_public_ip" {
   name                = "asia_firewall_public_ip"
   location            = var.asia_networking_core_location
