@@ -36,10 +36,10 @@ resource "azurerm_vpn_gateway_connection" "vpn1_asia_branch1" {
     bgp_enabled = true
     ipsec_policy {
       dh_group       = "DHGroup2"
-      ike_encryption = "AES256"
-      ike_integrity  = "SHA256"
-      ipsec_encryption = "AES256"
-      ipsec_integrity  = "SHA256"
+      ike_encryption_algorithm = "AES256"
+      ike_integrity_algorithm  = "SHA256"
+      encryption_algorithm = "AES256"
+      integrity_algorithm  = "SHA256"
       pfs_group       = "PFS2"
       sa_datasize     = "102400"
       sa_lifetime     = "28800"
