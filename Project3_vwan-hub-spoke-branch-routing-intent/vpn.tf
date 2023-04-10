@@ -33,16 +33,16 @@ resource "azurerm_vpn_gateway_connection" "vpn1_asia_branch1" {
   vpn_link {
     name             = "link1-branch1-sea"
     vpn_site_link_id = azurerm_vpn_site.vpn1_asia_branch1.link[0].id
-    bgp_enabled = true
+    bgp_enabled      = true
     ipsec_policy {
-      dh_group       = "DHGroup2"
+      dh_group                 = "DHGroup2"
       ike_encryption_algorithm = "AES256"
       ike_integrity_algorithm  = "SHA256"
-      encryption_algorithm = "AES256"
-      integrity_algorithm  = "SHA256"
-      pfs_group       = "PFS2"
-      sa_datasize     = "102400"
-      sa_lifetime     = "28800"
+      encryption_algorithm     = "AES256"
+      integrity_algorithm      = "SHA256"
+      pfs_group                = "PFS2"
+      sa_datasize_kb           = "102400"
+      sa_lifetime_sec          = "28800"
     }
     shared_key = var.branch1sharedkey
   }
