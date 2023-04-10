@@ -40,7 +40,7 @@ resource "azurerm_vpn_gateway_connection" "vpn1_asia_branch1" {
       ike_integrity_algorithm  = "SHA256"
       encryption_algorithm     = "AES256"
       integrity_algorithm      = "SHA256"
-      pfs_group                = "PFS2"
+      pfs_group                = "None"
       sa_data_size_kb          = "102400"
       sa_lifetime_sec          = "28800"
     }
