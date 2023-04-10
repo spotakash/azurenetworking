@@ -31,7 +31,7 @@ variable "primary_location_asia" {
 }
 
 variable "branch1pubip" {
-  type    = string
+  type    = list(string)
   default = ""
 }
 
