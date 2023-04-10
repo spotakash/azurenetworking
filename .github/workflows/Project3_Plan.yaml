@@ -63,10 +63,8 @@ jobs:
 
     - name: 'Terraform Plan'
       id: plan
-      run: terraform plan -out=main.tfplan \
-        -var="branch1pubip=${{ env.TF_VAR_BRANCH1PUBIP }}" \
-        -var="branch1sharedkey=${{ env.TF_VAR_BRANCH1SHAREDKEY }}"
-    
+      run: terraform plan -out=main.tfplan 
+          
     - name: 'Terraform Show'
       id: show
       run: terraform show main.tfplan
