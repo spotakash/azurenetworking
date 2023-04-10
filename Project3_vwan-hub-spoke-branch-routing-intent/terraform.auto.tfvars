@@ -25,7 +25,7 @@ vnet1_subnets_asia = {
   }
 }
 
-branch1pubip = "34.124.43.67"
+branch1pubip     = "34.124.43.67"
 branch1sharedkey = "JNB22OUrv2Lq7xzx+1SKeUAkqcZA3rl4"
 vnet1_subnets_eu = {
   subnet1 = {

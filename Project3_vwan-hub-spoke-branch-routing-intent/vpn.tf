@@ -46,5 +46,13 @@ resource "azurerm_vpn_gateway_connection" "vpn1_asia_branch1" {
     }
     shared_key = var.branch1sharedkey
   }
+  internet_security_enabled = true
+  routing {
+    associated_route_table_id = "${azurerm_virtual_hub.vhub-asia.id}/hubRouteTables/defaultRouteTable"
+    propagated_route_table {
+      route_table_ids = ["${azurerm_virtual_hub.vhub-asia.id}/hubRouteTables/noneRouteTable"]
+    }
+  }
+
 
 }
