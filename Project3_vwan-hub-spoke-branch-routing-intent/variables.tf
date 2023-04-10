@@ -30,11 +30,10 @@ variable "primary_location_asia" {
   default = "eastasia"
 }
 
-# variable "vnet1_address_space_asia" {
-#   type = list(string)
-#   default = [""]
-#   description = "value of the address space of Asia Spoke VNET1"
-# }
+variable "branch1pubip" {
+  type    = string
+  default = ""
+}
 
 variable "vnet1_subnets_asia" {
   type = map(object({
