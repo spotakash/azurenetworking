@@ -30,23 +30,23 @@ resource "azurerm_virtual_hub_connection" "asiahub-to-asiaspokevnet1" {
   virtual_hub_id            = azurerm_virtual_hub.vhub-asia.id
   remote_virtual_network_id = azurerm_virtual_network.asia-vnet1.id
   internet_security_enabled = true
-    routing {
-      associated_route_table_id = "${azurerm_virtual_hub.vhub-asia.id}/hubRouteTables/defaultRouteTable"
-      propagated_route_table {
-        route_table_ids = ["${azurerm_virtual_hub.vhub-asia.id}/hubRouteTables/noneRouteTable"]
-      }
+  routing {
+    associated_route_table_id = "${azurerm_virtual_hub.vhub-asia.id}/hubRouteTables/defaultRouteTable"
+    propagated_route_table {
+      route_table_ids = ["${azurerm_virtual_hub.vhub-asia.id}/hubRouteTables/noneRouteTable"]
     }
+  }
 }
 
 # Asia Secured HUB Route Table
 resource "azurerm_virtual_hub_route_table_route" "asia-fwroute" {
   route_table_id = "${azurerm_virtual_hub.vhub-asia.id}/hubRouteTables/defaultRouteTable"
 
-    name = "all_traffic" # For Public name = "public_traffic" or For Private name = "private_traffic"
-    destinations_type = "CIDR"
-    destinations = ["0.0.0.0/0","10.0.0.0/8","192.168.0.0/16"]
-    next_hop_type = "ResourceId"
-    next_hop = azurerm_firewall.asia_firewall.id
+  name              = "all_traffic" # For Public name = "public_traffic" or For Private name = "private_traffic"
+  destinations_type = "CIDR"
+  destinations      = ["0.0.0.0/0", "10.0.0.0/8", "192.168.0.0/16"]
+  next_hop_type     = "ResourceId"
+  next_hop          = azurerm_firewall.asia_firewall.id
 }
 
 # # EU vHUB

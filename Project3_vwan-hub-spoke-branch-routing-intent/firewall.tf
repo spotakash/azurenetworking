@@ -13,7 +13,7 @@ resource "azurerm_firewall" "asia_firewall" {
   firewall_policy_id = azurerm_firewall_policy.common_azfw_premium_policy.id # <---This can be variable of existing policy
   # zones = [ "1", "2" ] 
   virtual_hub {
-    virtual_hub_id = azurerm_virtual_hub.vhub-asia.id
+    virtual_hub_id  = azurerm_virtual_hub.vhub-asia.id
     public_ip_count = "1"
   }
 

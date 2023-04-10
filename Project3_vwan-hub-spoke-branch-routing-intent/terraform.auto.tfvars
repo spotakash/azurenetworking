@@ -1,10 +1,10 @@
 address_space                  = "172.16"
 asia_networking_resource_group = "asia_networking"
 # asia_networking_core_location  = "eastasia"
-eu_networking_resource_group   = "eu_networking"
+eu_networking_resource_group = "eu_networking"
 # eu_networking_core_location    = "westeurope"
 primary_location_asia = "eastasia"
-primary_location_eu = "westeurope"
+primary_location_eu   = "westeurope"
 
 vnet1_subnets_asia = {
   subnet1 = {
