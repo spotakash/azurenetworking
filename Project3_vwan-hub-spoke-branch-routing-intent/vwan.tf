@@ -42,7 +42,7 @@ resource "azurerm_virtual_hub_connection" "asiahub-to-asiaspokevnet1" {
 resource "azurerm_virtual_hub_route_table_route" "asia-fwroute" {
   route_table_id = "${azurerm_virtual_hub.vhub-asia.id}/hubRouteTables/defaultRouteTable"
 
-    name = "internet_branch_protection"
+    name = "all_traffic" # For Public name = "public_traffic" or For Private name = "private_traffic"
     destinations_type = "CIDR"
     destinations = ["0.0.0.0/0","10.0.0.0/8","192.168.0.0/16"]
     next_hop_type = "ResourceId"
