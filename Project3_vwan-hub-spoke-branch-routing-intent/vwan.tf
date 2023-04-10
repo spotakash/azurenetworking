@@ -31,19 +31,19 @@ resource "azurerm_virtual_hub_connection" "asiahub-to-asiaspokevnet1" {
   remote_virtual_network_id = azurerm_virtual_network.asia-vnet1.id
 }
 
-# EU vHUB
-resource "azurerm_virtual_hub" "vhub-eu" {
-  name                = "eu-vhub"
-  location            = var.primary_location_eu
-  resource_group_name = azurerm_resource_group.vwan.name
-  address_prefix      = "${var.address_space}.2.0/23"
-  virtual_wan_id      = azurerm_virtual_wan.wan.id
-  sku                 = "Standard"
-}
+# # EU vHUB
+# resource "azurerm_virtual_hub" "vhub-eu" {
+#   name                = "eu-vhub"
+#   location            = var.primary_location_eu
+#   resource_group_name = azurerm_resource_group.vwan.name
+#   address_prefix      = "${var.address_space}.2.0/23"
+#   virtual_wan_id      = azurerm_virtual_wan.wan.id
+#   sku                 = "Standard"
+# }
 
-# EU vHUB to EU SeSpoke VNET Connection
-resource "azurerm_virtual_hub_connection" "euhub-to-euspokevnet1" {
-  name                      = "euhub-to-euspokevnet1"
-  virtual_hub_id            = azurerm_virtual_hub.vhub-eu.id
-  remote_virtual_network_id = azurerm_virtual_network.eu-vnet1.id
-}
+# # EU vHUB to EU SeSpoke VNET Connection
+# resource "azurerm_virtual_hub_connection" "euhub-to-euspokevnet1" {
+#   name                      = "euhub-to-euspokevnet1"
+#   virtual_hub_id            = azurerm_virtual_hub.vhub-eu.id
+#   remote_virtual_network_id = azurerm_virtual_network.eu-vnet1.id
+# }
