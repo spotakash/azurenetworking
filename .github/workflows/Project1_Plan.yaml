@@ -5,11 +5,11 @@ on:
     branches:
       - main
     paths:
-      - 'vnet-hub-spoke-multi-region-project1/**'
+      - 'Project1_vnet-hub-spoke-multi-region/**'
   workflow_dispatch:
 
 env:
-  WORKDIR: "vnet-hub-spoke-multi-region-project1"
+  WORKDIR: "Project1_vnet-hub-spoke-multi-region"
   ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
   ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
   ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
