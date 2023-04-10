@@ -1,4 +1,4 @@
-name: Destroy-Project1
+name: Project1-DESTROY
 
 on:
   pull_request:

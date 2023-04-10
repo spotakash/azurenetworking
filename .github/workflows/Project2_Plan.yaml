@@ -1,4 +1,4 @@
-name: PLAN-Project2
+name: Project2-PLAN
 
 on:
   pull_request:

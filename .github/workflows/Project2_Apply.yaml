@@ -1,4 +1,4 @@
-name: APPLY-Project2
+name: Project2-APPLY
 
 on:
   pull_request:
