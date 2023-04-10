@@ -31,7 +31,7 @@ variable "primary_location_asia" {
 }
 
 variable "branch1pubip" {
-  type    = list(string)
+  type    = string
   default = "192.168.2.1"
 }
 

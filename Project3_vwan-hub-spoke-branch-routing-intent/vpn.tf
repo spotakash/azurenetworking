@@ -15,7 +15,7 @@ resource "azurerm_vpn_site" "vpn1_asia_branch1" {
   device_vendor       = "branch1-device"
   link {
     name          = "link1-branch1-sea"
-    ip_address    = [var.branch1pubip]
+    ip_address    = var.branch1pubip
     provider_name = "branch1-provider"
     speed_in_mbps = "100"
     bgp {
