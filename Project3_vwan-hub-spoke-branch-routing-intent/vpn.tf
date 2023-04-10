@@ -35,7 +35,7 @@ resource "azurerm_vpn_gateway_connection" "vpn1_asia_branch1" {
     vpn_site_link_id = azurerm_vpn_site.vpn1_asia_branch1.link[0].id
     bgp_enabled      = true
     ipsec_policy {
-      dh_group                 = "DHGroup2"
+      dh_group                 = "DHGroup14"
       ike_encryption_algorithm = "AES256"
       ike_integrity_algorithm  = "SHA256"
       encryption_algorithm     = "AES256"
