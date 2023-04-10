@@ -35,6 +35,11 @@ variable "branch1pubip" {
   default = "192.168.2.1"
 }
 
+variable "branch1sharedkey" {
+  type    = string
+  default = "branch1sharedkey"
+}
+
 variable "vnet1_subnets_asia" {
   type = map(object({
     name                    = string

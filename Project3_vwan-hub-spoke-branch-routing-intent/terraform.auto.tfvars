@@ -24,8 +24,6 @@ vnet1_subnets_asia = {
     name                    = "AzureBastionSubnet"
   }
 }
-
-branch1pubip = "34.124.43.67"
 vnet1_subnets_eu = {
   subnet1 = {
     subnet_address_prefixes = ["172.16.5.0/26"]
