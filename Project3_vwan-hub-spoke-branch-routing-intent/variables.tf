@@ -32,7 +32,7 @@ variable "primary_location_asia" {
 
 variable "branch1pubip" {
   type    = list(string)
-  default = ""
+  default = "192.168.2.1"
 }
 
 variable "vnet1_subnets_asia" {
