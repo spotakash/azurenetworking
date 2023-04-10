@@ -12,11 +12,11 @@ output "asia_firewall_public_ip" {
 }
 
 
-data "azurerm_firewall" "eu_firewall_public_ip" {
-  name                = azurerm_firewall.eu_firewall.name
-  resource_group_name = azurerm_resource_group.vwan.name
-}
+# data "azurerm_firewall" "eu_firewall_public_ip" {
+#   name                = azurerm_firewall.eu_firewall.name
+#   resource_group_name = azurerm_resource_group.vwan.name
+# }
 
-output "eu_firewall_public_ip" {
-  value = data.azurerm_firewall.eu_firewall_public_ip.virtual_hub[0].public_ip_addresses
-}
+# output "eu_firewall_public_ip" {
+#   value = data.azurerm_firewall.eu_firewall_public_ip.virtual_hub[0].public_ip_addresses
+# }
