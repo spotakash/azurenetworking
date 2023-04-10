@@ -54,5 +54,4 @@ resource "azurerm_vpn_gateway_connection" "vpn1_asia_branch1" {
     }
   }
 
-
 }
