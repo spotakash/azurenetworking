@@ -19,7 +19,7 @@ env:
   TFSTATE_KEY: "vwanhubroutingintent.tfstate"
   TFSTATE_RESOURCE_GROUP_NAME: ${{ secrets.TFSTATE_RESOURCES_GROUP_NAME }}
   TFSTATE_STORAGE_ACCOUNT_KEY: ${{ secrets.TFSTATE_STORAGE_ACCOUNT_KEY }}
-  TF_VAR_BRANCH1_PUBIP: ${{ secrets.BRANCH1_PUBIP }}
+  TF_VAR_BRANCH1PUBIP: ${{ secrets.BRANCH1PUBIP }}
   TF_VAR_BRANCH1SHAREDKEY: ${{ secrets.BRANCH1SHAREDKEY }}
 
 permissions:
@@ -64,7 +64,7 @@ jobs:
     - name: 'Terraform Plan'
       id: plan
       run: terraform plan -out=main.tfplan 
-          
+
     - name: 'Terraform Show'
       id: show
       run: terraform show main.tfplan

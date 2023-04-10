@@ -19,7 +19,8 @@ env:
   TFSTATE_KEY: "vwanhubroutingintent.tfstate"
   TFSTATE_RESOURCE_GROUP_NAME: ${{ secrets.TFSTATE_RESOURCES_GROUP_NAME }}
   TFSTATE_STORAGE_ACCOUNT_KEY: ${{ secrets.TFSTATE_STORAGE_ACCOUNT_KEY }}
-  TF_VAR_branch1pubip: ${{ secrets.BRANCH1_PUBIP }}
+  TF_VAR_BRANCH1PUBIP: ${{ secrets.BRANCH1PUBIP }}
+  TF_VAR_BRANCH1SHAREDKEY: ${{ secrets.BRANCH1SHAREDKEY }}
 
 permissions:
   contents: read
