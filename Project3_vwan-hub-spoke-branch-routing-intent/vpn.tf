@@ -19,7 +19,7 @@ resource "azurerm_vpn_site" "vpn1_asia_branch1" {
     provider_name = "branch1-provider"
     speed_in_mbps = "100"
     bgp {
-      asn    = "64512"
+      asn             = "64512"
       peering_address = "169.254.46.134"
     }
   }
