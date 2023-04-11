@@ -48,18 +48,18 @@ resource "azurerm_firewall_policy_rule_collection_group" "common_azfw_premium_po
     }
   }
 
-  #   nat_rule_collection {
-  #     name     = "nat_rule_collection1"
-  #     priority = 300
-  #     action   = "Dnat"
-  #     rule {
-  #       name                = "nat_rule_collection1_rule1"
-  #       protocols           = ["TCP", "UDP"]
-  #       source_addresses    = ["10.0.0.1", "10.0.0.2"]
-  #       destination_address = "192.168.1.1"
-  #       destination_ports   = ["80"]
-  #       translated_address  = "192.168.0.1"
-  #       translated_port     = "8080"
-  #     }
-  #   }
+  nat_rule_collection {
+    name     = "nat_rule_collection1"
+    priority = 300
+    action   = "Dnat"
+    rule {
+      name                = "nat_rule_collection1_rule1"
+      protocols           = ["TCP", "UDP"]
+      source_addresses    = ["*"]
+      destination_address = data.azurerm_firewall.asia_firewall_public_ip.virtual_hub[0].public_ip_addresses
+      destination_ports   = ["22"]
+      translated_address  = "172.16.7.4"
+      translated_port     = "22"
+    }
+  }
 }
