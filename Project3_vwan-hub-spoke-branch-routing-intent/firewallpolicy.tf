@@ -56,7 +56,7 @@ resource "azurerm_firewall_policy_rule_collection_group" "common_azfw_premium_po
       name                = "nat_rule_collection1_rule1"
       protocols           = ["TCP", "UDP"]
       source_addresses    = ["*"]
-      destination_address = asia_firewall_public_ip.value
+      destination_address = output.asia_firewall_public_ip.value
       destination_ports   = ["22"]
       translated_address  = "172.16.7.4"
       translated_port     = "22"
