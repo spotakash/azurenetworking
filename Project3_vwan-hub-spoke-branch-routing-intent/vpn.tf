@@ -3,15 +3,8 @@ resource "azurerm_vpn_gateway" "asia_vpngw" {
   location            = var.primary_location_asia
   resource_group_name = azurerm_resource_group.vwan.name
   virtual_hub_id      = azurerm_virtual_hub.vhub-asia.id
-  # Customizing BGP Peer Address
-  bgp_settings {
-    asn = "64512"
-    peer_weight = "100"
-    instance_0_bgp_peering_address {
-      instance_bgp_peering_address = "169.254.46.134"
-    }
-  }
 }
+
 
 resource "azurerm_vpn_site" "vpn1_asia_branch1" {
   name                = "vpn1_asia_gcp"
