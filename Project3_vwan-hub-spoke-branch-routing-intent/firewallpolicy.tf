@@ -57,7 +57,7 @@ resource "azurerm_firewall_policy_rule_collection_group" "common_azfw_premium_po
       protocols           = ["TCP", "UDP"]
       source_addresses    = ["*"]
       # destination_address = "${output.asia_firewall_public_ip}"
-      destination_address = azurerm_firewall.asia_firewall.virtual_hub.public_ip_addresses[0]
+      destination_address = azurerm_firewall.asia_firewall.virtual_hub[0].public_ip_addresses
       destination_ports   = ["22"]
       translated_address  = "172.16.7.4"
       translated_port     = "22"
