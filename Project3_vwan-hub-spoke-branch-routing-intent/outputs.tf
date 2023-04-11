@@ -8,7 +8,7 @@ data "azurerm_firewall" "asia_firewall_public_ip" {
 }
 
 output "asia_firewall_public_ip" {
-  value = index(data.azurerm_firewall.asia_firewall_public_ip.virtual_hub[0].public_ip_addresses, 0)
+  value = data.azurerm_firewall.asia_firewall_public_ip.virtual_hub[0].public_ip_addresses
 }
 
 
