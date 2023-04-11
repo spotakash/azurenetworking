@@ -8,7 +8,7 @@ resource "azurerm_vpn_gateway" "asia_vpngw" {
     asn = "64512"
     peer_weight = "100"
     instance_0_bgp_peering_address {
-      custom_ips = "169.254.46.134"
+      instance_bgp_peering_address = "169.254.46.134"
     }
   }
 }
