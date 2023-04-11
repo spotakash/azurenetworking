@@ -30,7 +30,7 @@ resource "azurerm_firewall_policy_rule_collection_group" "common_azfw_premium_po
         type = "Https"
         port = 443
       }
-      source_addresses  = ["${azurerm_virtual_network.asia_vnet1.address_space[0]}"]
+      source_addresses  = ["${var.address_space}.7.0/24"]
       destination_fqdns = ["*.microsoft.com", "*.ubuntu.com", "*.azure.com"]
     }
   }
