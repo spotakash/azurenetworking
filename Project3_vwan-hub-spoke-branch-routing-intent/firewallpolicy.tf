@@ -30,8 +30,8 @@ resource "azurerm_firewall_policy_rule_collection_group" "common_azfw_premium_po
         type = "Https"
         port = 443
       }
-      source_addresses  = ["10.0.0.1"]
-      destination_fqdns = ["*.microsoft.com"]
+      source_addresses  = ["${azurerm_virtual_network.asia_vnet.address_space.0}"]
+      destination_fqdns = ["*.microsoft.com", "*.ubuntu.com", "*.azure.com"]
     }
   }
 
@@ -57,7 +57,7 @@ resource "azurerm_firewall_policy_rule_collection_group" "common_azfw_premium_po
       protocols           = ["TCP", "UDP"]
       source_addresses    = ["*"]
       # destination_address = "${output.asia_firewall_public_ip}"
-      destination_address = azurerm_firewall.asia_firewall.virtual_hub[0].public_ip_addresses[0]
+      destination_address = azurerm_firewall.asia_firewall.virtual_hub[0].public_ip_addresses[0] # Always Map Index value of vHUB and Public IP
       destination_ports   = ["22"]
       translated_address  = "172.16.7.4"
       translated_port     = "22"
