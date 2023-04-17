@@ -25,8 +25,8 @@ vnet1_subnets_asia = {
   }
 }
 
-branch1pubip     = "34.124.43.67"
-branch1sharedkey = "JNB22OUrv2Lq7xzx+1SKeUAkqcZA3rl4"
+branch1pubip     = "xxxxxxxx"
+branch1sharedkey = "xxxxxxxx"
 vnet1_subnets_eu = {
   subnet1 = {
     subnet_address_prefixes = ["172.16.5.0/26"]
