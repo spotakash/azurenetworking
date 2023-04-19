@@ -53,9 +53,9 @@ resource "azurerm_firewall_policy_rule_collection_group" "common_azfw_premium_po
     priority = 300
     action   = "Dnat"
     rule {
-      name                = "nat_rule_collection1_rule1"
-      protocols           = ["TCP", "UDP"]
-      source_addresses    = ["*"]
+      name             = "nat_rule_collection1_rule1"
+      protocols        = ["TCP", "UDP"]
+      source_addresses = ["*"]
       # destination_address = "${output.asia_firewall_public_ip}"
       destination_address = azurerm_firewall.asia_firewall.virtual_hub[0].public_ip_addresses[0] # Always Map Index value of vHUB and Public IP
       destination_ports   = ["22"]
