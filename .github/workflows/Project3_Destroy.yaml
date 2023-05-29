@@ -5,22 +5,21 @@ on:
     branches:
       - main
     paths:
-      - 'Project3_vwan-hub-spoke-branch-routing-intent/**'
+      - 'Project3_vWAN_RoutingIntent/**'
   workflow_dispatch:
 
 env:
-  WORKDIR: "Project3_vwan-hub-spoke-branch-routing-intent"
+  WORKDIR: "Project3_vWAN_RoutingIntent"
   ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
   ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
   ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
   ARM_USE_OIDC: true
   TFSTATE_STORAGE_ACCOUNT_NAME: ${{ secrets.TFSTATE_STORAGE_ACCOUNT_NAME }}
   TFSTATE_CONTAINER_NAME: ${{ secrets.TFSTATE_CONTAINER_NAME }}
-  TFSTATE_KEY: "vwanhubroutingintent.tfstate"
+  TFSTATE_KEY: "rountintent.tfstate"
   TFSTATE_RESOURCE_GROUP_NAME: ${{ secrets.TFSTATE_RESOURCES_GROUP_NAME }}
   TFSTATE_STORAGE_ACCOUNT_KEY: ${{ secrets.TFSTATE_STORAGE_ACCOUNT_KEY }}
-  TF_VAR_BRANCH1PUBIP: ${{ secrets.BRANCH1PUBIP }}
-  TF_VAR_BRANCH1SHAREDKEY: ${{ secrets.BRANCH1SHAREDKEY }}
+  TF_VAR_myips: ${{ secrets.myips }}
 
 permissions:
   contents: read

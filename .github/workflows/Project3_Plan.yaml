@@ -5,22 +5,21 @@ on:
     branches:
       - main
     paths:
-      - 'Project3_vwan-hub-spoke-branch-routing-intent/**'
+      - 'Project3_vWAN_RoutingIntent/**'
   workflow_dispatch:
 
 env:
-  WORKDIR: "Project3_vwan-hub-spoke-branch-routing-intent"
+  WORKDIR: "Project3_vWAN_RoutingIntent"
   ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
   ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
   ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
   ARM_USE_OIDC: true
   TFSTATE_STORAGE_ACCOUNT_NAME: ${{ secrets.TFSTATE_STORAGE_ACCOUNT_NAME }}
   TFSTATE_CONTAINER_NAME: ${{ secrets.TFSTATE_CONTAINER_NAME }}
-  TFSTATE_KEY: "vwanhubroutingintent.tfstate"
+  TFSTATE_KEY: "rountintent.tfstate"
   TFSTATE_RESOURCE_GROUP_NAME: ${{ secrets.TFSTATE_RESOURCES_GROUP_NAME }}
   TFSTATE_STORAGE_ACCOUNT_KEY: ${{ secrets.TFSTATE_STORAGE_ACCOUNT_KEY }}
-  TF_VAR_BRANCH1PUBIP: ${{ secrets.BRANCH1PUBIP }}
-  TF_VAR_BRANCH1SHAREDKEY: ${{ secrets.BRANCH1SHAREDKEY }}
+  TF_VAR_myips: ${{ secrets.myips }}
 
 permissions:
   contents: read
@@ -58,13 +57,13 @@ jobs:
         -backend-config="storage_account_name=${{ env.TFSTATE_STORAGE_ACCOUNT_NAME }}" \
         -backend-config="container_name=${{ env.TFSTATE_CONTAINER_NAME }}" \
         -backend-config="key=${{ env.TFSTATE_KEY }}" \
-        -backend-config="resource_group_name=${{ env.TFSTATE_RESOURCE_GROUP_NAME }}" \
-        -backend-config="access_key=${{ env.TFSTATE_STORAGE_ACCOUNT_KEY }}"
+        -backend-config="resource_group_name=${{ env.TFSTATE_RESOURCE_GROUP_NAME }}" 
+        # -backend-config="access_key=${{ env.TFSTATE_STORAGE_ACCOUNT_KEY }}"
 
     - name: 'Terraform Plan'
       id: plan
       run: terraform plan -out=main.tfplan 
 
-    - name: 'Terraform Show'
-      id: show
-      run: terraform show main.tfplan
+    # - name: 'Terraform Show'
+    #   id: show
+    #   run: terraform show -json main.tfplan | jq -r '.resource_changes[] | [.change.actions[], .change.after.location, .type, .change.after.name] | @tsv' | awk 'BEGIN {FS="\t"; print "ACTION\tLOCATION\tRESOURCE TYPE\tRESOURCE NAME"} {print $1 "\t" $2 "\t" $3 "\t" $4}'
