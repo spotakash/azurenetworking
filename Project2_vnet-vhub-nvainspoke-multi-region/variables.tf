@@ -1,7 +1,43 @@
+variable "projectname" {
+  type    = string
+  default = "Project2"
+}
+
+variable "vmsize" {
+  type    = string
+  default = "Standard_B1s"
+}
+
+variable "vmadmin_username" {
+  type    = string
+  default = "username"
+}
+variable "vmpassword" {
+  type    = string
+  default = "complexpassword"
+}
+
+variable "myip" {
+  type    = string
+  default = "192.168.0.0"
+
+}
+
+variable "officeip" {
+  type    = string
+  default = "192.168.2.0"
+}
+
 variable "address_space" {
   type    = string
   default = "172.16"
 }
+
+variable "branch_space" {
+  type    = string
+  default = "198.168"
+}
+
 
 variable "asia_networking_resource_group" {
   type    = string
@@ -23,20 +59,12 @@ variable "eu_networking_core_location" {
   default = "westeurope"
 }
 
-# variable "asia_spoke_vnet" {
-#   type = map(object({
-#     name     = string
-#     vnet_id  = string
-#     spoke_rg = string
-#   }))
-#   description = "Asia spoke resource ID"
-# }
+variable "westus_networking_core_location" {
+  type    = string
+  default = "westus_networking"
+}
 
-# variable "eu_spoke_vnet" {
-#   type = map(object({
-#     name     = string
-#     vnet_id  = string
-#     spoke_rg = string
-#   }))
-#   description = "EU spoke resource ID"
-# }
+variable "firewallandpolicysku" {
+  type    = string
+  default = "Premium"
+}

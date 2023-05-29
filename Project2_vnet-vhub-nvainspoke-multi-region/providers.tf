@@ -25,7 +25,7 @@ provider "azurerm" {
 
 locals {
   common_tags = {
-    environment = "test"
+    environment = "simulation"
     project     = "vhub-nvainspoke-multi-region"
   }
 }

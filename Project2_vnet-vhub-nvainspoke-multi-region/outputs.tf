@@ -1,7 +1,3 @@
-# output "subnet_id" {
-#   value = [for subnet in azurerm_subnet.vnetprefix : subnet.id]
-# }
-
 data "azurerm_firewall" "asia_firewall_public_ip" {
   name                = azurerm_firewall.asia_firewall.name
   resource_group_name = azurerm_resource_group.asianetwork.name
