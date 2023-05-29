@@ -200,5 +200,6 @@ resource "azurerm_virtual_hub_connection" "vhubconct-seceu-vnet" {
   depends_on = [
     azurerm_virtual_hub.vhub-eu
   ]
+  
 
 }
