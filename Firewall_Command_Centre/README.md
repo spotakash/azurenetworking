@@ -6,7 +6,7 @@ Main objective was to bring maximum but most relevant information in front of op
 Using Grafan auto-refresh capability, dashboard sharing and Playlist etc, it's usage can be extended.
 <u> *Same capabilities can be achieved by writting [Azure Workbook](https://learn.microsoft.com/en-us/azure/azure-monitor/visualize/workbooks-overview)*</u>
 
-<img src="/Project7_Firewall_Command_Centre/AzFw_Command_Centre.jpg" alt="AzFw_Command_Centre" width=50% height=50%>
+<img src="/Firewall_Command_Centre/AzFw_Command_Centre.jpg" alt="AzFw_Command_Centre" width=50% height=50%>
 
 In order to enable automated Azure Firewall Diagnostics Setting, Azure Landing Zone Custom Policy Set Defition is being used. 
 - [Here is Guidance](https://github.com/Azure/ALZ-Bicep/blob/main/infra-as-code/bicep/modules/policy/definitions/README.md) to deploy policy (in case not deployed as part Azure Landing Zone)
@@ -15,7 +15,7 @@ In order to enable automated Azure Firewall Diagnostics Setting, Azure Landing Z
 #### Usage Guidance
 - Using [Import a Dashboard](https://grafana.com/docs/grafana/latest/dashboards/manage-dashboards/#import-a-dashboard)
 - Ensure you update Scope and Resources Selection so that you get telementry data only 
-<img src="/Project7_Firewall_Command_Centre/Steps.jpg" alt="Steps" width=25% height=25%>
+<img src="/Firewall_Command_Centre/Steps.jpg" alt="Steps" width=25% height=25%>
 - After that save your Dashboard version and start reviewing logs.
 
 *Note: This is first version and more of knowledge sharing. Effort to maintained will be limited. If you feel something more be added or fixe, please do PR. Open for suggestion. I have thing in backlog to make it more feature rich.*
