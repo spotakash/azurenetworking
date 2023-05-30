@@ -14,7 +14,7 @@ In this repo, a sample code is being developed and tested for below high level d
   2. [Virtual Hub Conenction](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_hub_connection): Due to limitation of accessible of 3rd party NVA trial license, Azure Firewall `Premium` is being used. Therefore, normal **`virtual hub connection`** is being used ([provider used](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_hub_connection)). When using 3rd Party NVA in Spoke, using **`virtual hub bgp conenction`** should be used ([provider should be used](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_hub_bgp_connection)).
   3. [Azure Firewall Parent and Child Policy](https://learn.microsoft.com/en-us/azure/firewall-manager/policy-overview#hierarchical-policies): To bring unification on certails rules and optimize manual effort for different region Firewall Policy.
 
-- ##### *Review [Routing Intent Project](Project3_vWAN_RoutingIntent) for how <u>Terraform Map Function, IP Group</u> can simplify lot of work*
+- ##### *Review [Routing Intent Project](/Project3_vWAN_RoutingIntent) for how <u>Terraform Map Function, IP Group</u> can simplify lot of work*
 
 ********************
 ### *Cost Optimization*
