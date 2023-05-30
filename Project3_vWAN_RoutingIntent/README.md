@@ -2,7 +2,7 @@
 This pattern is using recently annouced [Azure Virtual WAN Routing Intent](https://azure.microsoft.com/en-us/updates/general-availability-routing-intent-and-virtual-wan-integrated-firewall-nvas/) Capability.
 
 In this repo, a sample code is being developed and testing for below high level design to build and test Routing Intent Capability across multiple Region using Secured Virtual Wan HUB (using Azure Firewall `Premium SKU`) 
-<img src="/Project3_vWAN_RoutingIntent/vWAN_Routing_Intent.jpg" alt="High Level Design" width=50% height=50%>
+<img src="/Project3_vWAN_RoutingIntent/vWAN_Routing_Intent.jpg" alt="High Level Design" width=70% height=70%>
 
 - #### Key Facets used in this sample for code optimization
   1. [Azure Firewall Parent and Child Policy](https://learn.microsoft.com/en-us/azure/firewall-manager/policy-overview#hierarchical-policies): To bring unification on certails rules and optimize manual effort for different region Firewall Policy.
