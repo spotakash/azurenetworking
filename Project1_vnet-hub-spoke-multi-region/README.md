@@ -6,7 +6,7 @@
 This code base helps you to quickly build Traditional Virtual Network HUB SPOKE Topology with VNET Peering. 
 If you have existing **SPOKE VNET**, this Code base will help you to build HUB VNET and VNET Peering between HUB and SPOKE VNET, by simply providing the SPOKE VNET details in TFVAR.
 
-<img src="https://user-images.githubusercontent.com/7689697/229443858-1a054e82-8c2a-4a52-8e71-2cb8bf435244.png" alt="image" width="50%" height="50%">
+<img src="https://user-images.githubusercontent.com/7689697/229443858-1a054e82-8c2a-4a52-8e71-2cb8bf435244.png" alt="image" width="70%" height="70%">
 
 
 Key Componet, it will help build and achieve;
