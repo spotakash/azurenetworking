@@ -6,7 +6,7 @@ Main objective was to bring maximum but most relevant information in front of op
 Using Grafan auto-refresh capability, dashboard sharing and Playlist etc, it's usage can be extended.
 <u> *Same capabilities can be achieved by writting [Azure Workbook](https://learn.microsoft.com/en-us/azure/azure-monitor/visualize/workbooks-overview)*</u>
 
-<img src="/Firewall_Command_Centre/AzFw_Command_Centre.jpg" alt="AzFw_Command_Centre" width=50% height=50%>
+<img src="/Firewall_Command_Centre/AzFw_Command_Centre.jpg" alt="AzFw_Command_Centre" width=30% height=30%>
 
 In order to enable automated Azure Firewall Diagnostics Setting, Azure Landing Zone Custom Policy Set Defition is being used. 
 - [Here is Guidance](https://github.com/Azure/ALZ-Bicep/blob/main/infra-as-code/bicep/modules/policy/definitions/README.md) to deploy policy (in case not deployed as part Azure Landing Zone)
