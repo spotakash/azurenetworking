@@ -7,7 +7,7 @@ In this repo, a sample code is being developed and testing for below high level 
 - #### Key Facets used in this sample for code optimization
   1. [Azure Firewall Parent and Child Policy](https://learn.microsoft.com/en-us/azure/firewall-manager/policy-overview#hierarchical-policies): To bring unification on certails rules and optimize manual effort for different region Firewall Policy.
   2. [Terraform Map Function](https://developer.hashicorp.com/terraform/language/functions/map): Using Map function to automated multi region deployment and standadized it.
-  3. [AzApi](https://learn.microsoft.com/en-us/azure/developer/terraform/overview-azapi-provider): As of written and tested on 26/05/2023, Azure vWAN Routing Intent does not have Terraform Provider. Therefore, AzApi is vbeing used to enable it programatically as part of Terraform Code.
+  3. [AzApi](https://learn.microsoft.com/en-us/azure/developer/terraform/overview-azapi-provider): As of written and tested on 26/05/2023, Azure vWAN Routing Intent does not have Terraform Provider. Therefore, AzApi is being used to enable it programatically as part of Terraform Code.
   4. [Azure IP Group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/ip_group): Extensive usage of Azure IP Groups. One of the highly recommended feature to centrally mananaged all IP prefixes than hardcoding as per of variables.
   5. Sample Ubuntu VM  with DNAT Rule: Each region Spoke VNETs with DNAT Rule for only secured inbound connection is allowed. Inject your source IP variable as part of Secret.
 
