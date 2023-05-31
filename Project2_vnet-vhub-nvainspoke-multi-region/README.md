@@ -3,11 +3,11 @@ This pattern is using [Route traffic through an NVA](https://learn.microsoft.com
 
 In this repo, a sample code is being developed and tested for below high level design to build and test Route traffice through NVA (NVA in Spoke) across multiple Region using Virtual Wan HUB
 
-- In thi pattern Azure Firewall is being used as NVA in SPOKE
+- In this pattern Azure Firewall is being used as NVA in SPOKE
 - Also used NAT Gateway from specific Nested Spoke VNET to Internet Outbound. It is being to avoid *[SNAT port exhaustion and use it along side Azure Firewall](https://azure.microsoft.com/en-us/blog/scale-azure-firewall-snat-ports-with-nat-gateway-for-large-workloads/)* 
 <img src="/Project2_vnet-vhub-nvainspoke-multi-region/NVA_in_SPOKE_vWAN.jpg" alt="High Level Design" width=70% height=70%>
 
-*This particular pattern is very useful if cusomter is using 3rd Party Network Virtual Appliance and wants all type of traffic to be inspected/controlled by those NVAs. Although Azure vWAN now even support various type of [3rd Party NVA](https://learn.microsoft.com/en-us/azure/virtual-wan/about-nva-hub#partners), sometime customer are standardized on specific NVA across global deployment and wants to use same control/management console. In that case, NVA spoke model come handy and go-forward pattern*
+*This particular pattern is very useful if you are using 3rd Party Network Virtual Appliance and wants all type of traffic to be inspected/controlled by those NVAs. Although Azure vWAN now even support various type of [3rd Party NVA](https://learn.microsoft.com/en-us/azure/virtual-wan/about-nva-hub#partners), sometime customer are standardized on specific NVA across global deployment and wants to use same control/management console. In that case, NVA spoke model come handy and go-forward pattern*
 
 - #### Key Facets used in this sample for code optimization
   1. **(Optional)** [Azure Firewall with NAT Gateway](https://learn.microsoft.com/en-us/azure/nat-gateway/tutorial-hub-spoke-nat-firewall): To bring unification on certails rules and optimize manual effort for different region Firewall Policy.
