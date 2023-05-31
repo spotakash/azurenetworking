@@ -8,4 +8,4 @@ Some pattern, artifacts to accelerate your adoption on Azure Networking around H
 - <u>*Bonus Asset*</u>: Build-Deploy-Review Azure Firewall Key Metrics and Logs in single Dashboard with Regular refresh *(powered by Azure Grafana and Azure Landing Zone Custom Policy Set Definition)*
 ----
 
-*Note: This is first version and more of knowledge sharing. Effort to maintained will be limited. If you feel something more be added or fixe, please do PR. Open for suggestion. I have thing in backlog to make it more feature rich.*
+*Note: This is first version and more of knowledge sharing. Effort to maintained will be limited. If you feel something more be added or fixed, please do PR. Open for suggestion. I have thing in backlog to make it more feature rich.*
