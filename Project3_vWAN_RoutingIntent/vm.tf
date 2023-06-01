@@ -30,7 +30,7 @@ resource "azurerm_virtual_machine" "vm" {
   }
   os_profile {
     computer_name  = "${each.value["name"]}-vm"
-    admin_username = "akashrt"
+    admin_username = "username"
     admin_password = "complexpassword"
   }
   os_profile_linux_config {
