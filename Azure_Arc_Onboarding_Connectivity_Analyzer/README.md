@@ -1,4 +1,4 @@
-#### Azure Arc Securred Internet Connectivity Analyzer
+#### Azure Arc Onboarding Connectivity Analyzer
 Main goal of this script is to run on source environment and check the readines of source environment for [Azure Arc Onboarding](https://learn.microsoft.com/en-us/azure/azure-arc/servers/deployment-options#onboarding-methods).
 Key consideration is that there is still few secured public endpoint required to be opened. Therefore, this script can help run and give you instant ouput if source environment is ready.
 

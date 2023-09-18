@@ -2,7 +2,7 @@
 # Guidance is to run atleast 3-4 different Server from different type network so that proper validation can be done
 # Once Result Comes out, chose right deployment method describe here https://learn.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-2-deploy-azure-arc-enabled-servers
 
-# Name: Azure Arc Deployment Secured Internet Connectivity Analyzer
+# Name: Azure_Arc_Onboarding_Connectivity_Analyzer
 # v0.1
 # Author: Akash Kumar
 # Date: 18-09-2023
