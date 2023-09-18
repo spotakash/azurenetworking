@@ -10,4 +10,5 @@ Azure Arc support both Public and [Private Endpoint](https://learn.microsoft.com
 
 Follow instruction insider script to run this. Ideally, any One Time (MUST) and Always (MUST) should be true.
 You could optionally export output locally in csv file.
+
 <img src="ArcOutput.png" width="60%" height="60%">
